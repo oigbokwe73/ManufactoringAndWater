@@ -5,6 +5,60 @@ To enable data collection at large with minimized infrastructure cost, the clien
 
 Here’s a comprehensive breakdown of the **scenario** and the **SQL database schema** you would need to support it.
 
+Here's a **Mermaid diagram** that visualizes both the **data flow** and **SQL schema relationships** for your smart water metering system using Azure Cloud:
+
+---
+
+### 📊 **Mermaid Diagram: Data Flow + SQL Schema**
+
+```mermaid
+graph TD
+
+%% Data Flow
+A[Smart Water Meter CDMA] --> B[Verizon CDMA Network]
+B --> C[Azure IoT Hub]
+C --> D[Azure Function / Stream Analytics]
+D --> E[Azure SQL Database]
+
+%% Database Tables
+E --> F1[Customers]
+E --> F2[Regions]
+E --> F3[WaterMeters]
+E --> F4[WaterConsumptionReadings]
+E --> F5[Alerts]
+E --> F6[MaintenanceLogs]
+E --> F7[ConsumptionThresholds]
+E --> F8[MeterCommandsQueue]
+E --> F9[UsageAnalytics View]
+
+%% Relationships
+F1 -->|CustomerID| F3
+F2 -->|RegionID| F1
+F2 -->|RegionID| F3
+F3 -->|MeterID| F4
+F3 -->|MeterID| F5
+F3 -->|MeterID| F6
+F3 -->|MeterID| F8
+F2 -->|RegionID| F7
+F4 -->|MeterID| F9
+
+%% Dashboards
+F9 --> Z[Power BI]
+F5 --> Z
+F2 --> Z
+
+```
+
+---
+
+### ✅ Summary of the Diagram
+
+- **Left Side (Flow)**: From CDMA smart meter → Verizon → Azure IoT Hub → Azure Functions → SQL DB.
+- **Middle (SQL Tables)**: Core tables handling customer, meter, region, and analytics data.
+- **Right Side (Analytics)**: Power BI consumes from aggregated and alert tables.
+
+Would you like me to convert this into an image or integrate it into an architecture doc?
+
 ---
 
 ## ✅ **Scenario Overview**
