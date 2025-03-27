@@ -13,7 +13,6 @@ To enable data collection at large with minimized infrastructure cost, the clien
   - Customer and asset management.
   - Region-based consumption optimization.
 
----
 
 
 Here’s a comprehensive breakdown of the **scenario** and the **SQL database schema** you would need to support it.
