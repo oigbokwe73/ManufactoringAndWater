@@ -3,7 +3,22 @@ The client wanted to integrate CDMA based water meter with Azure cloud to create
 To enable data collection at large with minimized infrastructure cost, the client wanted to implement a cloud based data analytics solution. This system will integrate water meter CDMA chips with cloud based data analytical system creating  a Internet of Things (IoT) environment. This IoT system should utilize Azure Cloud services to integrate with sensors placed on Smart Water Meters providing data analytics to both customers as well as the client to determine water consumption at real-time; screen defaulter from over consumption of water resource; load balancing based on water consumption need in different regions/groups; frame stratagems for saving water resource across the US region.
 
 
+## ✅ **Scenario Overview**
+
+- **Data Source**: 500,000+ CDMA-enabled water meters, transmitting data via Verizon's network through AMR.
+- **Objective**: Real-time data collection, long battery life, low latency two-way communication.
+- **Solution Goals**:
+  - Ingest water consumption data via IoT hub and push to Azure SQL DB.
+  - Real-time analytics (alerts, over-consumption).
+  - Customer and asset management.
+  - Region-based consumption optimization.
+
+---
+
+
 Here’s a comprehensive breakdown of the **scenario** and the **SQL database schema** you would need to support it.
+
+
 
 Here's a **Mermaid diagram** that visualizes both the **data flow** and **SQL schema relationships** for your smart water metering system using Azure Cloud:
 
@@ -61,17 +76,6 @@ Would you like me to convert this into an image or integrate it into an architec
 
 ---
 
-## ✅ **Scenario Overview**
-
-- **Data Source**: 500,000+ CDMA-enabled water meters, transmitting data via Verizon's network through AMR.
-- **Objective**: Real-time data collection, long battery life, low latency two-way communication.
-- **Solution Goals**:
-  - Ingest water consumption data via IoT hub and push to Azure SQL DB.
-  - Real-time analytics (alerts, over-consumption).
-  - Customer and asset management.
-  - Region-based consumption optimization.
-
----
 
 ## 🗂️ SQL Database Tables
 
