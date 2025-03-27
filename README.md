@@ -1,4 +1,7 @@
-Given your scenario—a large-scale **IoT smart water metering system** with real-time consumption tracking and analytics—the SQL database tables should be designed with scalability, performance, and analytical capabilities in mind.
+The client wanted to integrate CDMA based water meter with Azure cloud to create a smart water metering architecture capable to track real-time water consumption and data analytics. The data was to be collected from domestic water meters across US through Automatic Meter Reading (AMR) via CDMA chips and Verizon wireless network. With about 500,000 water meters installed, the core challenge meant collecting water flow readings from meters in minimum time utilized for two-way communication and hence increasing the life of battery powering the smart water meters.
+
+To enable data collection at large with minimized infrastructure cost, the client wanted to implement a cloud based data analytics solution. This system will integrate water meter CDMA chips with cloud based data analytical system creating  a Internet of Things (IoT) environment. This IoT system should utilize Azure Cloud services to integrate with sensors placed on Smart Water Meters providing data analytics to both customers as well as the client to determine water consumption at real-time; screen defaulter from over consumption of water resource; load balancing based on water consumption need in different regions/groups; frame stratagems for saving water resource across the US region.
+
 
 Here’s a comprehensive breakdown of the **scenario** and the **SQL database schema** you would need to support it.
 
