@@ -24,8 +24,7 @@ namespace ManufactoringAndWater
         private HttpRequest _req;
         private NameValueCollection nvc = new NameValueCollection();
         [Function("usageanalytics")]
-        public IActionResult Run([HttpTrigger(AuthorizationLevel.Anonymous, "get", Route = "usageanalytics/{id}")]
-            HttpRequest req, string id)
+        public IActionResult Run([HttpTrigger(AuthorizationLevel.Anonymous, "get", Route = "usageanalytics/{id}")]HttpRequest req, string id)
         {
             var input = JsonConvert.SerializeObject(new { id });
             _req = req;
